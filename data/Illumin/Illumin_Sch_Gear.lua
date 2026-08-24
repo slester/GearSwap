@@ -326,15 +326,18 @@ function init_gear_sets()
 
     -- Idle sets (default idle set not needed since the other three are defined, but leaving for testing purposes)
 
+	-- DT -50
+	-- MDT -3
+	-- 9 Refresh
     sets.idle = {
 		main="Mpaca's Staff",
 		sub="Khonsu",
 		ammo="Homiliary",
-        head="Nyame Helm",
+        head="Nyame Helm", -- 7
 		neck="Warder's Charm +1",
 		ear1="Etiolation Earring",
 		ear2="Hearty Earring",
-        body="Arbatel Gown +3",
+        body="Arbatel Gown +3", --13
 		hands="Nyame Gauntlets",
 		ring1="Stikini Ring +1",
 		ring2="Stikini Ring +1",
@@ -403,7 +406,16 @@ function init_gear_sets()
 	sets.buff['Light Arts'] = {} --legs="Academic's Pants +3"
 	sets.buff['Dark Arts'] = {} --body="Academic's Gown +3"
 
-    sets.buff.Sublimation = {head="Acad. Mortar. +3",waist="Embla Sash"}
+	-- head/body/waist = 20 fewer DT; 19 DT recoverable
+    sets.buff.Sublimation = {
+		head="Acad. Mortar. +3",
+		body="Peda. Gown +3",
+		waist="Embla Sash",
+		-- ear1="Savant's Earring", -- 1 Sublimation
+		ring1="Defending Ring", -- 10 DT
+		neck="Loricate Torque +1", -- 6 DT
+		ammo="Staunch Tathlum +1", -- 3 DT
+	}
     sets.buff.DTSublimation = {waist="Embla Sash"}
 	
 	-- Weapons sets
