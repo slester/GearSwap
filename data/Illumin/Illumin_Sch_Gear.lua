@@ -44,18 +44,54 @@ function init_gear_sets()
     sets.precast.JA['Tabula Rasa'] = {legs="Peda. Pants +1"}
 	sets.precast.JA['Enlightenment'] = {} --body="Peda. Gown +1"
 
-    -- Fast cast sets for spells
+	-- WITH WRONG ARTS: +20% penalty and no grimoire bonuses
+	-- RDM subjob: 15 + Gear: 65 = 80/80
+	sets.precast.FC = {
+		main="Musa", -- 10
+		sub="Clerisy Strap +1", -- 3
+		ammo="Incantor Stone", -- 2 OR ammo="Staunch Tathlum +1", -- SIRD-11%, DT-3%
+		--head="",
+		neck="Voltsurge Torque", -- 4
+		ear1="Loquacious Earring", -- 2
+		ear2="Malignance Earring", -- 4
+		body="Arbatel Gown +3", -- DT-13%
+		hands="Academic's Bracers +2", -- 7, TODO +3 for 8
+		ring1="Defending Ring", -- DT-10%
+		ring2="Medada's Ring", -- 10
+		back="Fi Follet Cape +1", -- 10, SIRD-5
+		waist="Embla Sash", -- 5
+		legs="Agwu's Slops", -- 7
+		feet="Amalric Nails +1", -- 6, SIRD-16
+	}
 
-    sets.precast.FC = {main=gear.grioavolr_fc_staff,sub="Clerisy Strap +1",ammo="Impatiens",
-        head="Amalric Coif +1",neck="Voltsurge Torque",ear1="Enchntr. Earring +1",ear2="Malignance Earring",
-        body="Zendik Robe",hands="Acad. Bracers +3",ring1="Kishar Ring",ring2="Lebeche Ring",
-        back="Perimede Cape",waist="Witful Belt",legs="Psycloth Lappas",feet="Regal Pumps +1"}
-		
-	sets.precast.FC.Arts = {}
+	-- WITH CORRECT ARTS
+	-- RDM subjob: 15 + Gear: 57 = 72/80
+	-- Spellcasting Time same grimoire: -10% base + -23% = -33%
+	-- DT: -35%
+	-- also want to make SIRD, DT priorities
+	-- The maximum recast reduction allowed using Light Arts and Grimoire reduction gear is 90%
+	-- Does not affect spells that are affected by Celerity/Alacrity/Accession/Manifestation
+	sets.precast.FC.Arts = {
+		main="Musa", -- 10
+		sub="Clerisy Strap +1", -- 3
+		ammo="Incantor Stone", -- 2 OR ammo="Staunch Tathlum +1", -- SIRD-11%, DT-3%
+		head="Pedagogy Mortarboard +3", -- Grimoire: -13%
+		neck="Voltsurge Torque", -- 4
+		ear1="Loquacious Earring", -- 2
+		ear2="Malignance Earring", -- 4
+		body="Arbatel Gown +3", -- DT-13%
+		hands="Academic's Bracers +2", -- 7, TODO +3 for 8
+		ring1="Defending Ring", -- DT-10%
+		ring2="Medada's Ring", -- 10
+		back="Fi Follet Cape +1", -- 10, SIRD-5
+		waist="Embla Sash", -- 5
+		legs="Arbatel Pants +3", -- DT-12%
+		feet="Academic's Loafers +2", -- Grimoire: -10%, TODO +3 for -13%
+	}
 
     sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {waist="Siegel Sash"})
 
-    sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC, {ear1="Malignance Earring"})
+    --sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC, {ear1="Malignance Earring"})
 
     sets.precast.FC.Cure = set_combine(sets.precast.FC, {main="Serenity",sub="Clerisy Strap +1",body="Heka's Kalasiris"})
 
