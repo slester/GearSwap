@@ -118,11 +118,6 @@ function init_gear_sets()
     -- Midcast Sets
 
     sets.Kiting = {ring2="Shneddick Ring"}
-    sets.latent_refresh = {}
-	sets.latent_refresh_grip = {}
-	sets.TPEat = {}
-	sets.DayIdle = {}
-	sets.NightIdle = {}
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
 
 	-- CONSERVE MP: 62
@@ -138,7 +133,6 @@ function init_gear_sets()
 	}
 
 	sets.midcast.Teleport = sets.ConserveMP
-
     sets.midcast.FastRecast = sets.precast.FC
 	sets.midcast.Raise = sets.midcast.FastRecast
 	sets.midcast['Full Cure'] = sets.midcast.FastRecast
@@ -212,9 +206,10 @@ function init_gear_sets()
 	}
 
 	sets.midcast.Stoneskin = set_combine(sets.midcast['Enhancing Magic'], {
-		neck="Nodens Gorget",
-		ear2="Earthcry Earring",
-		waist="Siegel Sash",
+		neck="Nodens Gorget", -- +30
+		ear2="Earthcry Earring", -- +10
+		waist="Siegel Sash", -- +20
+		legs="Shedir Seraweels", -- +35
 	})
 
 	sets.midcast.Aquaveil = set_combine(sets.midcast['Enhancing Magic'], {
@@ -222,6 +217,7 @@ function init_gear_sets()
 		head="Chironic Hat", --1
 		hands="Regal Cuffs", --2
 		waist="Emphatikos Rope", --1
+		legs="Shedir Seraweels", --1
 	})
 
 	sets.midcast.Regen = set_combine(sets.midcast['Enhancing Magic'], {

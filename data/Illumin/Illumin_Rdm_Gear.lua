@@ -287,26 +287,30 @@ function init_gear_sets()
 		feet="Leth. Houseaux +3"
 	}
 
-	sets.midcast.Aquaveil = {
-		head="Amalric Coif +1",
-		hands="Regal Cuffs",
-		waist="Emphatikos Rope",
-		--legs="Shedir Seraweels",
+	sets.midcast.Aquaveil = { --7
+		main="Vadose Rod", --1
+		head="Amalric Coif +1", --2
+		hands="Regal Cuffs", --2
+		waist="Emphatikos Rope", --1
+		legs="Shedir Seraweels", --1
 	}
-	--sets.midcast.BarElement = {legs="Shedir Seraweels"}
+	sets.midcast.BarElement = {legs="Shedir Seraweels"}
 	sets.midcast.Temper = sets.EnhancingSkill
 	sets.midcast.Enspell = sets.EnhancingSkill
 	sets.midcast.BoostStat = {hands="Viti. Gloves +3"}
-	sets.midcast.Stoneskin = {
-		neck="Nodens Gorget",
-		ear2="Earthcry Earring",
-		waist="Siegel Sash",
-		--legs="Shedir Seraweels",
+	sets.midcast.Stoneskin = { -- +95
+		neck="Nodens Gorget", -- +30
+		ear2="Earthcry Earring", -- +10
+		waist="Siegel Sash", -- +20
+		legs="Shedir Seraweels", -- +35
 	}
 	sets.midcast.Protect = {ring2="Sheltered Ring"}
 	sets.midcast.Shell = {ring2="Sheltered Ring"}
 
-	sets.Self_Refresh = {back="Grapevine Cape",waist="Gishdubar Sash"}
+	sets.Self_Refresh = {
+		back="Grapevine Cape",
+		waist="Gishdubar Sash",
+	}
 
 	sets.midcast.Phalanx = {
 		main="Sakpata's Sword",
@@ -369,7 +373,7 @@ function init_gear_sets()
 		head="Atrophy Chapeau +3",
 		neck="Erra Pendant",
 		ear1="Regal Earring",
-		ear2="Mani Earring", -- TODO
+		--ear2="Mani Earring", -- TODO
 		body="Shango Robe",
 		hands="Regal Cuffs",
 		ring1="Evanescence Ring",
