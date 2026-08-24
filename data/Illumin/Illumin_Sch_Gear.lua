@@ -326,41 +326,35 @@ function init_gear_sets()
 
     -- Idle sets (default idle set not needed since the other three are defined, but leaving for testing purposes)
 
-    sets.idle = {main="Mpaca's Staff",sub="Umbra Strap",ammo="Homiliary",
-        head="Befouled Crown",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
-        body="Jhakri Robe +2",hands=gear.merlinic_refresh_hands,ring1="Stikini Ring +1",ring2="Stikini Ring +1",
-        back="Umbra Cape",waist="Carrier's Sash",legs="Assid. Pants +1",feet=gear.chironic_refresh_feet}
+    sets.idle = {
+		main="Mpaca's Staff",
+		sub="Khonsu",
+		ammo="Homiliary",
+        head="Nyame Helm",
+		neck="Warder's Charm +1",
+		ear1="Etiolation Earring",
+		ear2="Hearty Earring",
+        body="Arbatel Gown +3",
+		hands="Nyame Gauntlets",
+		ring1="Stikini Ring +1",
+		ring2="Stikini Ring +1",
+        back="Moonlight Cape",
+		waist="Carrier's Sash",
+		legs="Agwu's Slops",
+		feet="Nyame Sollerets"
+	}
 
-    sets.idle.PDT = {main="Malignance Pole",sub="Umbra Strap",ammo="Staunch Tathlum +1",
-        head="Gende. Caubeen +1",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
-        body="Vrikodara Jupon",hands="Gende. Gages +1",ring1="Defending Ring",ring2="Dark Ring",
-        back="Umbra Cape",waist="Carrier's Sash",legs="Nyame Flanchard",feet=gear.chironic_refresh_feet}
-		
-	sets.idle.Hippo = set_combine(sets.idle.PDT, {feet="Hippo. Socks +1"})
+	sets.idle.PDT = set_combine(sets.idle, {})
+	sets.idle.MDT = set_combine(sets.idle, {})
+	--sets.idle.Hippo = set_combine(sets.idle.PDT, {feet="Hippo. Socks +1"})
+	sets.idle.Weak = set_combine(sets.idle, {})
 
-    sets.idle.Weak = {main="Bolelabunga",sub="Genmei Shield",ammo="Homiliary",
-        head="Befouled Crown",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
-        body="Jhakri Robe +2",hands=gear.merlinic_refresh_hands,ring1="Defending Ring",ring2="Dark Ring",
-        back="Umbra Cape",waist="Carrier's Sash",legs="Assid. Pants +1",feet=gear.chironic_refresh_feet}
-		
     -- Defense sets
+	sets.defense.PDT = set_combine(sets.idle, {})
+	sets.defense.MDT = set_combine(sets.idle, {})
+    sets.defense.MEVA = set_combine(sets.idle, {})
 
-    sets.defense.PDT = {main="Malignance Pole",sub="Umbra Strap",ammo="Staunch Tathlum +1",
-        head="Gende. Caubeen +1",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
-        body="Mallquis Saio +2",hands="Gende. Gages +1",ring1="Defending Ring",ring2="Dark Ring",
-        back="Umbra Cape",waist="Carrier's Sash",legs="Nyame Flanchard",feet="Battlecast Gaiters"}
-
-    sets.defense.MDT = {main="Malignance Pole",sub="Umbra Strap",ammo="Staunch Tathlum +1",
-        head="Gende. Caubeen +1",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
-        body="Mallquis Saio +2",hands="Gende. Gages +1",ring1="Defending Ring",ring2="Dark Ring",
-        back="Umbra Cape",waist="Carrier's Sash",legs="Nyame Flanchard",feet="Battlecast Gaiters"}
-		
-    sets.defense.MEVA = {main="Daybreak",sub="Genmei Shield",ammo="Staunch Tathlum +1",
-        head=gear.merlinic_nuke_head,neck="Warder's Charm +1",ear1="Etiolation Earring",ear2="Sanare Earring",
-        body=gear.merlinic_nuke_body,hands="Gende. Gages +1",ring1="Vengeful Ring",ring2="Purity Ring",
-        back=gear.nuke_jse_back,waist="Acuity Belt +1",legs="Merlinic Shalwar",feet="Amalric Nails +1"}
-		
-    sets.Kiting = {feet="Herald's Gaiters"}
+    sets.Kiting = {ring2="Shneddick Ring"}
     sets.latent_refresh = {waist="Fucho-no-obi"}
 	sets.latent_refresh_grip = {sub="Oneiros Grip"}
 	sets.TPEat = {neck="Chrys. Torque"}
