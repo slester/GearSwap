@@ -46,6 +46,7 @@ function init_gear_sets()
 	
 	-- Precast sets to enhance JAs
 	sets.precast.JA['Chainspell'] = {body="Viti. Tabard +3"}
+	sets.precast.JA['Saboteur'] = {sub="Diamond Aspis"}
 
 	-- Fast cast sets for spells
 	-- 80 cap, 38 from traits, 42 to cap
@@ -571,7 +572,7 @@ function init_gear_sets()
 	sets.buff.DTSublimation = {waist="Embla Sash"}
 
 	-- Weapons sets
-	sets.weapons.Naegling = {main="Naegling",sub="Genmei Shield",range=empty}
+	sets.weapons.Naegling = {main="Naegling",sub="Diamond Aspis",range=empty}
 	sets.weapons.Crocea = {main="Crocea Mors",sub="Genmei Shield",range=empty}
 	sets.weapons.DualWeapons = {main="Naegling",sub="Machaera +2",range=empty}
 	sets.weapons.EnspellOnly = {main="Qutrub Knife",sub="Esoteric Athame",range="Ullr"}

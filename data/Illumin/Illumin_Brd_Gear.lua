@@ -235,8 +235,13 @@ function init_gear_sets()
 		body="Telchine Chas.",hands="Telchine Gloves",ring1="Stikini Ring +1",ring2="Stikini Ring +1",
 		back=gear.magic_jse_back,waist="Embla Sash",legs="Telchine Braconi",feet="Telchine Pigaches"}
 		
-	sets.midcast.Stoneskin = set_combine(sets.midcast['Enhancing Magic'], {neck="Nodens Gorget",ear2="Earthcry Earring",waist="Siegel Sash",legs="Shedir Seraweels"})
-		
+	sets.midcast.Stoneskin = { -- +95
+		neck="Nodens Gorget", -- +30
+		ear2="Earthcry Earring", -- +10
+		waist="Siegel Sash", -- +20
+		legs="Shedir Seraweels", -- +35
+	}
+
 	sets.midcast.Cursna =  set_combine(sets.midcast.Cure, {neck="Debilis Medallion",hands="Hieros Mittens",
 		back="Oretan. Cape +1",ring1="Haoma's Ring",ring2="Menelaus's Ring",waist="Witful Belt",feet="Vanya Clogs"})
 		
