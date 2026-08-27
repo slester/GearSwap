@@ -37,9 +37,10 @@ end
 
 -- Define sets and vars used by this job file.
 function init_gear_sets()
-    --------------------------------------
-    -- Start defining the sets
-    --------------------------------------
+	-- General principles, after optimizing each set:
+	-- Try to keep as much "Damage Taken -" in each set as possible
+	-- As much as possible, maximize HP but keep it mostly level, balanced (no major HP+ or HP- items alone unless unavoidable)
+	-- Fill other slots with evasion, magic evasion, elemental resistances and so on
 
 	-- Weapons sets
 	sets.weapons.MeleeWeapons = {main="Yagrush",sub="Ammurapi Shield"}
@@ -48,26 +49,32 @@ function init_gear_sets()
     sets.buff.Sublimation = {waist="Embla Sash"}
     sets.buff.DTSublimation = {waist="Embla Sash"}
 	
-    -- FAST CAST, QUICK MAGIC
-	--81/80
+    -- FAST CAST: 80/80, assuming no RDM subjob
+	-- DT: 43/50
+	-- Haste: /25
 	sets.precast.FC = {
-		main="Malignance Pole",
-		sub="Clerisy Strap +1", --3
-		ammo="Sapience Orb", --2
-		head="Ebers Cap +3", --13
-		neck="Cleric's Torque +2", --10
-		ear1="Malignance Earring", --4
-		ear2="Etiolation Earring", --1
-		body="Inyanga Jubbah +2", --14
-		hands="Fanatic Gloves", --7
-		ring1="Defending Ring",
-		ring2="Medada's Ring", --10
-		back="Alaunus's Cape", --10
-		legs="Ebers Pantaloons +3",
-		feet="Regal Pumps +1", --5-7
+		main="Malignance Pole", -- DT-20%
+		sub="Clerisy Strap +1", --3 FC
+		ammo="Sapience Orb", --2 FC
+		head="Ebers Cap +3", --13 FC
+		neck="Cleric's Torque +2", --10 FC
+		ear1="Odnowa Earring +1", -- DT-3%
+		ear2="Malignance Earring", --4 FC
+		body="Inyanga Jubbah +2", --14 FC
+		hands="Fanatic Gloves", --7 FC
+		ring1="Defending Ring", -- DT-10%
+		ring2="Medada's Ring", --10 FC
+		back="Alaunus's Cape", --10 FC
+		legs="Ebers Pantaloons +3", -- DT-13%, Healing Cast Time -15%
+		feet="Regal Pumps +1", --5-7 FC
 	}
 
-	--11/10
+	-- Healing cast time -15%, so we can remove 15FC
+	sets.precast.FC['Healing Magic'] = set_combine(sets.precast.FC, {
+		legs="Ebers Pantaloons +3", -- DT-13%, Healing Cast Time -15%
+	})
+
+	-- 11/10
 	sets.precast.QuickMagic = set_combine(sets.precast.FC, {
 		ammo="Impatiens", --2
 		ring1="Lebeche Ring", --2
@@ -400,13 +407,17 @@ function init_gear_sets()
 	sets.MagicBurst = {}
 
 	-- IDLE
+	-- DT:
+	-- Evasion:
+	-- Magic Evasion:
+	-- Resist Enfeeble:
 	sets.idle = {
 		main="Daybreak",
 		sub="Genmei Shield",
 		ammo="Staunch Tathlum +1",
 		head="Bunzi's Hat",
 		neck="Warder's Charm +1",
-		ear1="Eabani Earring",
+		ear1="Odnowa Earring +1", -- TODO: Alabaster Earring
 		ear2="Etiolation Earring",
 		body="Ebers Bliaut +3",
 		hands="Bunzi's Gloves",
@@ -458,38 +469,14 @@ function init_gear_sets()
 		body="Ayanmo Corazza +2",hands="Aya. Manopolas +2",ring1="Petrov Ring",Ring2="Ilabrat Ring",
         back="Moonlight Cape",waist="Windbuffet Belt +1",legs="Aya. Cosciales +2",feet="Battlecast Gaiters"}
 
-    sets.engaged.Acc = {ammo="Hasty Pinion +1",
-        head="Aya. Zucchetto +2",neck="Combatant's Torque",ear1="Telos Earring",ear2="Brutal Earring",
-		body="Ayanmo Corazza +2",hands="Aya. Manopolas +2",ring1="Petrov Ring",Ring2="Ilabrat Ring",
-        back="Moonlight Cape",waist="Olseni Belt",legs="Aya. Cosciales +2",feet="Aya. Gambieras +2"}
-
-	sets.engaged.DW = {ammo="Staunch Tathlum +1",
-        head="Aya. Zucchetto +2",neck="Asperity Necklace",ear1="Telos Earring",ear2="Suppanomimi",
-		body="Ayanmo Corazza +2",hands="Aya. Manopolas +2",ring1="Petrov Ring",Ring2="Ilabrat Ring",
-        back="Moonlight Cape",waist="Shetal Stone",legs="Aya. Cosciales +2",feet="Battlecast Gaiters"}
-
-    sets.engaged.DW.Acc = {ammo="Hasty Pinion +1",
-        head="Aya. Zucchetto +2",neck="Combatant's Torque",ear1="Telos Earring",ear2="Suppanomimi",
-		body="Ayanmo Corazza +2",hands="Aya. Manopolas +2",ring1="Petrov Ring",Ring2="Ilabrat Ring",
-        back="Moonlight Cape",waist="Shetal Stone",legs="Aya. Cosciales +2",feet="Aya. Gambieras +2"}
-
     sets.buff['Divine Caress'] = {hands="Ebers Mitts +3",back="Mending Cape"}
 
-	sets.HPDown = {head="Pixie Hairpin +1",ear1="Mendicant's Earring",ear2="Evans Earring",
-		body="Zendik Robe",hands="Hieros Mittens",ring1="Mephitas's Ring +1",ring2="Mephitas's Ring",
-		back="Swith Cape +1",waist="Carrier's Sash",legs="Shedir Seraweels",feet=""}
-
-	sets.HPCure = {main="Queller Rod",sub="Ammurapi Shield",ammo="Pemphredo Tathlum",
-		head="Nyame Helm",neck="Nodens Gorget",ear1="Etiolation Earring",ear2="Ethereal Earring",
-		body="Kaykaus Bliaut",hands="Kaykaus Cuffs",ring1="Kunaji Ring",ring2="Meridian Ring",
-		back="Alaunus's Cape",waist="Eschan Stone",legs="Ebers Pant. +1",feet="Kaykaus Boots"}
-
 	sets.buff.Doom = {
-		-- Override Gambanteinn in main slot if also doomed
+		-- Override Gambanteinn in main slot if also doomed?
 		main="Yagrush",
 		neck="Nicander's Necklace",
 		waist="Gishdubar Sash",
-		ring1="Eshmun's Ring",
+		ring1="Eshmun's Ring", -- TODO: different bags
 		ring2="Eshmun's Ring",
 	}
 	sets.precast.Item['Holy Water'] = {ring1="Blenmot's Ring +1"}
