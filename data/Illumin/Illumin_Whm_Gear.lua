@@ -171,22 +171,26 @@ function init_gear_sets()
 		legs="Ebers Pantaloons +3",
 	})
 
+ -- Cursna+: +101
+ -- Healing Skill: +133
+ -- Haste: /25
+ -- Fast Cast (recast): 
 	sets.midcast.Cursna = {
 		main="Yagrush",
 		sub="Thuellaic Ecu +1",
 		ammo="Pemphredo Tathlum",
-		head=gear.VanyaHood_HealingSkill,
-		neck="Debilis Medallion",
-		ear1="Meili Earring",
-		ear2="Ebers Earring +1",
-		body="Ebers Bliaut +3",
-		hands="Fanatic Gloves",
-		ring1="Haoma's Ring",
-		ring2="Menelaus's Ring",
-		back="Alaunus's Cape",
-		waist="Bishop's Sash",
-		legs="Theophany Pantaloons +3",
-		feet="Vanya Clogs"
+		head=gear.VanyaHood_HealingSkill, -- 20 Healing, 6% Haste
+		neck="Debilis Medallion", -- +15 Cursna
+		ear1="Meili Earring", -- 10 Healing
+		ear2="Ebers Earring +1", -- +11 Healing TODO: +2, +12 Healing
+		body="Ebers Bliaut +3", -- +34 Healing, 3% Haste
+		hands="Fanatic Gloves", -- +10 Healing, 3% Haste TODO: verify
+		ring1="Haoma's Ring", -- +8 Healing, +15 Cursna
+		ring2="Menelaus's Ring", -- +15 Healing, +20 Cursna
+		back="Alaunus's Cape",-- +25 Cursna
+		waist="Bishop's Sash", -- +5 Healing
+		legs="Theophany Pantaloons +3", -- +21 Cursna, 5% Haste
+		feet="Vanya Clogs" -- +5 Cursna, +20 Healing TODO: verify
 	}
 
 	sets.midcast.Erase = set_combine(sets.midcast.StatusRemoval, {
