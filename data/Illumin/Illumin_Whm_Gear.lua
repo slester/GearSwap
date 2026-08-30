@@ -64,15 +64,19 @@ function init_gear_sets()
 		hands="Fanatic Gloves", --7 FC
 		ring1="Defending Ring", -- DT-10%
 		ring2="Medada's Ring", --10 FC
-		back="Alaunus's Cape", --10 FC
+		back="Alaunus's Cape", --10 FC (10PDT)
 		legs="Ebers Pantaloons +3", -- DT-13%, Healing Cast Time -15%
 		feet="Regal Pumps +1", --5-7 FC
 	}
-
-	-- Healing cast time -15%, so we can remove 15FC
+	-- Healing cast time gifts -8% plus -15% from legs, so we can remove 23FC
 	sets.precast.FC['Healing Magic'] = set_combine(sets.precast.FC, {
 		legs="Ebers Pantaloons +3", -- DT-13%, Healing Cast Time -15%
+		body="Bunzi's Robe", -- (-14FC) DT-10
+		feet="Ebers Duckbills +3", -- (-5FC) DT-11
+		ear2="Etiolation Earring", -- (-4FC)
 	})
+
+	-- TODO RDM subjob FC sets
 
 	-- 11/10
 	sets.precast.QuickMagic = set_combine(sets.precast.FC, {
@@ -223,12 +227,19 @@ function init_gear_sets()
 		legs="Shedir Seraweels", -- +35
 	})
 
+	-- Enhancing Magic 490/501 = 3
+	-- commented out skill+ until I can get 11 more, probably with ML
 	sets.midcast.Aquaveil = set_combine(sets.midcast['Enhancing Magic'], {
 		main="Vadose Rod", --1
 		head="Chironic Hat", --1
+		--neck="Incanter's Torque", -- Enh+10
+		--ear1="Mimir Earring", -- Enh+10
 		hands="Regal Cuffs", --2
+		--back="Mending Cape", -- Enh+7
 		waist="Emphatikos Rope", --1
 		legs="Shedir Seraweels", --1
+		--ring1={name="Stikini Ring +1", bag="wardrobe3"}, -- Enh+8
+		--ring2={name="Stikini Ring +1", bag="wardrobe4"}, -- Enh+8
 	})
 
 	sets.midcast.Regen = set_combine(sets.midcast['Enhancing Magic'], {

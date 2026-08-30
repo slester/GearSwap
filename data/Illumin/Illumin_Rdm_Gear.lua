@@ -46,7 +46,10 @@ function init_gear_sets()
 	
 	-- Precast sets to enhance JAs
 	sets.precast.JA['Chainspell'] = {body="Viti. Tabard +3"}
+	sets.precast.JA['Composure'] = {sub="Diamond Aspis"}
+	sets.precast.JA['Spontaneity'] = {sub="Diamond Aspis"}
 	sets.precast.JA['Saboteur'] = {sub="Diamond Aspis"}
+	sets.precast.JA['Stymie'] = {sub="Diamond Aspis"}
 
 	-- Fast cast sets for spells
 	-- 80 cap, 38 from traits, 42 to cap
