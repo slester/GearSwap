@@ -69,7 +69,7 @@ function init_gear_sets()
 	sets.precast.JA["Sentinel"] = set_combine(sets.Enmity, { sub = "Diamond Aspis", feet = "Cab. Leggings +1" })
 	sets.precast.JA["Rampart"] = set_combine(sets.Enmity, { sub = "Diamond Aspis" }) --head="Valor Coronet" (Also Vit?)
 	sets.precast.JA["Fealty"] = set_combine(sets.Enmity, { sub = "Diamond Aspis", body = "Cab. Surcoat +1" })
-	sets.precast.JA["Divine Emblem"] = set_combine(sets.Enmity, { sub = "Diamond Aspis", feet = "Chev. Sabatons +1" })
+	sets.precast.JA["Divine Emblem"] = set_combine(sets.Enmity, { feet = "Chev. Sabatons +1" })
 	sets.precast.JA["Cover"] = set_combine(sets.Enmity, { sub = "Diamond Aspis", body = "Cab. Surcoat +1" }) --head="Rev. Coronet +1",
 
 	-- add mnd for Chivalry
@@ -93,25 +93,24 @@ function init_gear_sets()
 	sets.precast.JA["Provoke"] = set_combine(sets.Enmity, {})
 	sets.precast.JA["Warcry"] = set_combine(sets.Enmity, { sub = "Diamond Aspis" })
 	sets.precast.JA["Palisade"] = set_combine(sets.Enmity, { sub = "Diamond Aspis" })
-	sets.precast.JA["Intervene"] = set_combine(sets.Enmity, { sub = "Diamond Aspis" })
+	sets.precast.JA["Intervene"] = set_combine(sets.Enmity, {})
 	sets.precast.JA["Defender"] = set_combine(sets.Enmity, { sub = "Diamond Aspis" })
 	sets.precast.JA["Berserk"] = set_combine(sets.Enmity, { sub = "Diamond Aspis" })
 	sets.precast.JA["Aggressor"] = set_combine(sets.Enmity, { sub = "Diamond Aspis" })
 
-	-- Fast cast sets for spells
-	-- 59%
+	-- FAST CAST 68/80
 	sets.precast.FC = {
 		ammo = "Sapience Orb", -- 2%
 		head = { name = "Carmine Mask +1", augments = { "Accuracy+20", "Mag. Acc.+12", '"Fast Cast"+4' } }, -- 14%
-		body = { name = "Odyssean Chestplate", priority = 254 }, -- 5%   TODO Rev Surcoat +3
+		body = { name="Reverence Surcoat +3", priority=254 }, -- +10% TODO +4
 		hands = "Leyline Gloves", -- 8%
-		feet = "Chevalier Sabatons +2", -- 10%
+		feet = "Chevalier Sabatons +2", -- 10% TODO +3 (13%)
 		neck = { name = "Unmoving Collar +1", priority = 200 },
 		ear1 = { name = "Tuisto Earring", priority = 150 },
 		ear2 = { name = "Odnowa Earring +1", priority = 110 },
 		ring1 = "Medada's Ring", -- +10%
-		ring2 = { name = "Gelatinous Ring +1", priority = 135 },
-		waist = "Audumbla Sash",
+		ring2 = "Kishar Ring", -- +4%
+		waist = { name="Platinum Moogle Belt", priority=10 },
 		back = gear.fastcast_jse_back, -- 10%
 	}
 	sets.precast.FC["Enhancing Magic"] = set_combine(sets.precast.FC, { waist = "Siegel Sash" })
@@ -121,7 +120,7 @@ function init_gear_sets()
 	-- Weaponskill sets
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {
-		ammo = "Aurgelmir Orb +1",
+		-- ammo = "Aurgelmir Orb +1",
 		head = "Flam. Zucchetto +2",
 		neck = "Asperity Necklace",
 		ear1 = "Cessance Earring",
@@ -272,17 +271,18 @@ function init_gear_sets()
 		ammo = "Staunch Tathlum +1",
 		head = "Chevalier's Armet +2", -- TODO: +3
 		neck = "Warder's Charm +1",
-		ear1 = "Thureous Earring",
-		ear2 = "Odnowa Earring +1",
+		ear1 = "Odnowa Earring +1",
+        ear2 = "Chev. Earring +1",
 		body = "Sakpata's Plate",
 		hands = "Souveran Handschuhs +1",
 		ring1 = "Moonlight Ring",
-		ring2 = "Moonlight Ring",
+   		ring2 = "Gelatinous Ring +1",
 		back = gear.enmity_jse_back,
 		waist = "Carrier's Sash",
 		legs = "Chevalier's Cuisses +2", -- TODO: +3
 		feet = "Souveran Schuhs +1",
 	}
+	
 
 	sets.Kiting = { ring2 = "Shneddick Ring" }
 
