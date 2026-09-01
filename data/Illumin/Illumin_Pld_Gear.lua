@@ -62,12 +62,12 @@ function init_gear_sets()
 
     -- Precast sets to enhance JAs
     sets.precast.JA['Invincible'] = set_combine(sets.Enmity,{legs="Cab. Breeches +1"})
-    sets.precast.JA['Holy Circle'] = set_combine(sets.Enmity,{feet="Rev. Leggings +1"}) -- +3
-    sets.precast.JA['Sentinel'] = set_combine(sets.Enmity,{feet="Cab. Leggings +1"})
-    sets.precast.JA['Rampart'] = set_combine(sets.Enmity,{}) --head="Valor Coronet" (Also Vit?)
-    sets.precast.JA['Fealty'] = set_combine(sets.Enmity,{body="Cab. Surcoat +1"})
-    sets.precast.JA['Divine Emblem'] = set_combine(sets.Enmity,{feet="Chev. Sabatons +1"})
-    sets.precast.JA['Cover'] = set_combine(sets.Enmity, {body="Cab. Surcoat +1"}) --head="Rev. Coronet +1",
+    sets.precast.JA['Holy Circle'] = set_combine(sets.Enmity,{sub="Diamond Aspis",feet="Rev. Leggings +1"}) -- +3
+    sets.precast.JA['Sentinel'] = set_combine(sets.Enmity,{sub="Diamond Aspis",feet="Cab. Leggings +1"})
+    sets.precast.JA['Rampart'] = set_combine(sets.Enmity,{sub="Diamond Aspis"}) --head="Valor Coronet" (Also Vit?)
+    sets.precast.JA['Fealty'] = set_combine(sets.Enmity,{sub="Diamond Aspis",body="Cab. Surcoat +1"})
+    sets.precast.JA['Divine Emblem'] = set_combine(sets.Enmity,{sub="Diamond Aspis",feet="Chev. Sabatons +1"})
+    sets.precast.JA['Cover'] = set_combine(sets.Enmity, {sub="Diamond Aspis",body="Cab. Surcoat +1"}) --head="Rev. Coronet +1",
 	
     -- add mnd for Chivalry
     sets.precast.JA['Chivalry'] = {ammo="Paeapua",
@@ -77,12 +77,12 @@ function init_gear_sets()
 		
 	sets.precast.JA['Shield Bash'] = set_combine(sets.Enmity, {hands="Cab. Gauntlets +1"})
     sets.precast.JA['Provoke'] = set_combine(sets.Enmity, {})
-	sets.precast.JA['Warcry'] = set_combine(sets.Enmity, {})
-	sets.precast.JA['Palisade'] = set_combine(sets.Enmity, {})
-	sets.precast.JA['Intervene'] = set_combine(sets.Enmity, {})
-	sets.precast.JA['Defender'] = set_combine(sets.Enmity, {})
-	sets.precast.JA['Berserk'] = set_combine(sets.Enmity, {})
-	sets.precast.JA['Aggressor'] = set_combine(sets.Enmity, {})
+	sets.precast.JA['Warcry'] = set_combine(sets.Enmity, {sub="Diamond Aspis"})
+	sets.precast.JA['Palisade'] = set_combine(sets.Enmity, {sub="Diamond Aspis"})
+	sets.precast.JA['Intervene'] = set_combine(sets.Enmity, {sub="Diamond Aspis"})
+	sets.precast.JA['Defender'] = set_combine(sets.Enmity, {sub="Diamond Aspis"})
+	sets.precast.JA['Berserk'] = set_combine(sets.Enmity, {sub="Diamond Aspis"})
+	sets.precast.JA['Aggressor'] = set_combine(sets.Enmity, {sub="Diamond Aspis"})
 	
     -- Fast cast sets for spells
 	-- 59%
@@ -189,8 +189,45 @@ function init_gear_sets()
     sets.midcast.Protect = set_combine(sets.midcast['Enhancing Magic'], {ring2="Sheltered Ring"})
     sets.midcast.Shell = set_combine(sets.midcast['Enhancing Magic'], {ring2="Sheltered Ring"})
 	
-	sets.midcast.Phalanx = set_combine(sets.midcast['Enhancing Magic'], {main="Sakpata's Sword",sub="Forfend +1",hands="Souv. Handsch. +1",back="Weard Mantle",legs="Sakpata's Cuisses",feet="Souveran Schuhs +1"})
-	sets.Phalanx_Received = {main="Sakpata's Sword",hands="Souv. Handsch. +1",back="Weard Mantle",legs="Sakpata's Cuisses",feet="Souveran Schuhs +1"}
+	sets.midcast.Phalanx = {
+		main="Sakpata's Sword",
+		sub="Priwen",
+		--sub="Duban",
+		ammo="Aurgelmir Orb +1",
+		--head="Odyssean Helm",
+		head="Yorium Barbuta",
+		neck="Incanter's Torque",
+		ear1="Mimir Earring",
+		ear2="Chev. Earring +1",
+		body="Odyss. Chestplate",
+		hands="Souv. Handsch. +1",
+		ring1="Gelatinous Ring +1",
+		ring2="Regal Ring",
+		back="Weard Mantle",
+		waist="Flume Belt",
+		legs="Sakpata's Cuisses",
+		feet="Souveran Schuhs +1"
+	}
+	sets.Phalanx_Received = {
+		main="Sakpata's Sword",
+		sub="Priwen",
+		--ammo="Crepuscular Pebble",
+		--head="Odyssean Helm",
+		neck="Incanter's Torque",
+		ear1="Chev. Earring +1", -- TODO +2
+		ear2="Mimir Earring",
+		--body="Sworn Platemail",
+		body="Odyss. Chestplate",
+		hands="Souv. Handsch. +1",
+		--ring1="Murky Ring",
+		--ring2="Fortified Ring",
+		ring1="Gelatinous Ring +1",
+		ring2="Regal Ring",
+		back="Weard Mantle",
+		waist="Flume Belt",
+		legs="Sakpata's Cuisses",
+		feet="Souveran Schuhs +1"
+	}
 
     -- Idle sets
     sets.idle = {
