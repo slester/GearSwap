@@ -39,7 +39,7 @@ function user_job_setup()
 	send_command("bind @f10 gs c toggle TankAutoDefense")
 	send_command("bind ^@!` gs c cycle SkillchainMode")
 
-	select_default_macro_book()
+	--select_default_macro_book()
 	update_defense_mode()
 end
 
@@ -65,12 +65,12 @@ function init_gear_sets()
 
 	-- Precast sets to enhance JAs
 	sets.precast.JA["Invincible"] = set_combine(sets.Enmity, { legs = "Cab. Breeches +1" })
-	sets.precast.JA["Holy Circle"] = set_combine(sets.Enmity, { sub = "Diamond Aspis", feet = "Rev. Leggings +1" }) -- +3
+	sets.precast.JA["Holy Circle"] = set_combine(sets.Enmity, { sub = "Diamond Aspis", feet = "Rev. Leggings +3" })
 	sets.precast.JA["Sentinel"] = set_combine(sets.Enmity, { sub = "Diamond Aspis", feet = "Cab. Leggings +1" })
-	sets.precast.JA["Rampart"] = set_combine(sets.Enmity, { sub = "Diamond Aspis" }) --head="Valor Coronet" (Also Vit?)
+	sets.precast.JA["Rampart"] = set_combine(sets.Enmity, { sub = "Diamond Aspis", head = "Cab. Coronet +1" }) -- +3
 	sets.precast.JA["Fealty"] = set_combine(sets.Enmity, { sub = "Diamond Aspis", body = "Cab. Surcoat +1" })
 	sets.precast.JA["Divine Emblem"] = set_combine(sets.Enmity, { feet = "Chev. Sabatons +1" })
-	sets.precast.JA["Cover"] = set_combine(sets.Enmity, { sub = "Diamond Aspis", body = "Cab. Surcoat +1" }) --head="Rev. Coronet +1",
+	sets.precast.JA["Cover"] = set_combine(sets.Enmity, { sub = "Diamond Aspis", head = "Rev. Coronet +3", body = "Cab. Surcoat +1" })
 
 	-- add mnd for Chivalry
 	sets.precast.JA["Chivalry"] = {
@@ -79,7 +79,7 @@ function init_gear_sets()
 		neck = "Unmoving Collar +1",
 		ear1 = "Nourish. Earring",
 		ear2 = "Nourish. Earring +1",
-		body = "Rev. Surcoat +1",
+		body = "Rev. Surcoat +3",
 		hands = "Cab. Gauntlets +1",
 		ring1 = "Stikini Ring +1",
 		ring2 = "Rufescent Ring",
@@ -102,7 +102,7 @@ function init_gear_sets()
 	sets.precast.FC = {
 		ammo = "Sapience Orb", -- 2%
 		head = { name = "Carmine Mask +1", augments = { "Accuracy+20", "Mag. Acc.+12", '"Fast Cast"+4' } }, -- 14%
-		body = { name="Reverence Surcoat +3", priority=254 }, -- +10% TODO +4
+		body = { name="Rev. Surcoat +3", priority=254 }, -- +10% TODO +4
 		hands = "Leyline Gloves", -- 8%
 		feet = "Chevalier Sabatons +2", -- 10% TODO +3 (13%)
 		neck = { name = "Unmoving Collar +1", priority = 200 },
